@@ -1,0 +1,8 @@
+1. This notebook deals with handling .xlsx files attachments from the emails.
+2. In this, connection to IMAP server and the email account is established using imaplib package of python.
+3. Then the xlsx files from the unread emails are downloaded into a temporary directory (made using tempfile package)
+   and the converted into csv files using pandas.
+4. After conversion, the csv file is uploaded in the s3 bucket using boto3 and the temporary directory is removed.
+5. One thing to know that this code works fine on local machine but can have compatiblity issues when deploying on
+   AWS services because of pandas package. Hence, it is advised not to use pandas package when deploying on AWS.
+6. There are several logic to do the same task and downloading files two times can be reduced to only one time.
