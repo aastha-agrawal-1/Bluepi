@@ -1,5 +1,0 @@
-1. This use case deals with the insertion, deletion and updation of data everyday about 
-   the products in the product table using yesterday data (changes to be done in the data).
-2. As we cannot overwrite file which we are reading in Apache spark (here pyspark) , temporary 
-   folder have been used to copy the files and exporting the latest dataframe into csv in the 
-   main folder (which has file with latest changes) using overwrite mode.
