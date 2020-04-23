@@ -1,5 +1,6 @@
-1. This notebook deals with the insertion, deletion and updation of data everyday about 
-   the products in the product table using yesterday data (changes to be done in the data).
-2. As we cannot overwrite file which we are reading in Apache spark (here pyspark) , temporary 
-   folder have been used to copy the files and exporting the latest dataframe into csv in the 
-   main folder (which has file with latest changes) using overwrite mode.
+1. This notebook deals with handling only csv attachments received via email.
+2. In this, a coonection is established to your email account via imaplib and then data of csv file is fetched attached in
+   a mail uploaded in the AWS s3 bucket using boto3 connection. Only unseen emails are read. Specification in search function 
+   parameters can be made according to the need of use case.
+3. An additional feature is also created which is creating a folder in s3 bucket which is named using the file name,
+   the date and time of the email when received so as to keep all the files with their changed editions.
